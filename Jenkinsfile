@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Checkout Templates Files') {
+      steps {
+        git(url: 'https://github.com/FatimaGalindo/jenkins-scripts', branch: 'master')
+      }
+    }
+
   }
 }

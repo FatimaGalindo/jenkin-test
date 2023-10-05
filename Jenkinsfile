@@ -9,8 +9,10 @@ pipeline {
 
     stage('Checkout Templates Files') {
       steps {
-        dir(path: 'Templates')
-        git(url: 'https://github.com/FatimaGalindo/jenkins-scripts', branch: 'master')
+        dir(path: 'Templates') {
+          git(url: 'https://github.com/FatimaGalindo/jenkins-scripts', branch: 'master')
+        }
+
       }
     }
 
